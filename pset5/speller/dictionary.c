@@ -146,6 +146,6 @@ unsigned int size(void)
  */
 bool unload(void)
 {
-    // TODO
-    return false;
+    free_memory(root);
+        return true;
 }
