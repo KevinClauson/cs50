@@ -1,0 +1,16 @@
+0.  Longest word in the dictionary.
+1.  getrusage returns information describing the resources utilized by the current process.
+2.  16
+3.  They are both structs so easier to pass pointer to struct then the whole struct.  
+4.  The for loop keeps going until it get to the end of file.  It starts by getting a char that it converts to an int.  
+    We then check to see if that char was a letter with alpha or an apostrophes and if it is an apostrophe we also check if the index 
+    is greater than 0 because we want to make sure apostrophe is not the first char.  
+    If the length of the word we are building becomes bigger than the longest word in the dictionary, then we use a while loop to 
+    skip over the rest of the word and move on by returning the index to 0. If we run into a number then we also skip over and set
+    the index back to 0 we keep skiping over numbers until we run into another letter or end of file. If the current char is not a
+    letter or number or apostrophe then we set the last elemeent of the word array as a null to complete the string and count increment
+    the word variable by one.  Then we check if the word is in the dictionary.  If not we print it and increment the misspellings 
+    variable by one.  
+5.  Using fscanf() you might take in words that are not words, for example words that have numbers in them or things that are not 
+    letters.  By going a char at a time we can make checks for various things to weed out things that are not words.  
+6.  We do not want to modify those words so we declare them as constants. 

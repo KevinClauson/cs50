@@ -1,0 +1,12 @@
+1.  This is a header file that defines several integer types to aid in making C files more portable.  The exisiting integer types could vary from computer to computer, so these were created.
+2.  uint8_t is a fixed unsinged int of 8 bits.  So if you want to make sure you are only dealing with an int that's 1 byte(8 bits) you would use this type.  The same is true for the others, the type fixes the number of bits once can use.
+3.  BYTE is one byte; DWORD is 4 bytes; LONG is 4 bytes; WORD is 2 bytes.   
+4.  'B' and 'M' are the first 2 bytes.  
+5.  The bisize is number of bytes required by the structure and you have various structs that contain info about the bitmap.  The bitmap file header will have a struct that has the bfsize which is the size in bytes of the bitmap file.  
+6.  If biHeight is negative, the bitmap is a top-down bitmap and its origin is the upper-left corner.  Otherwise if positive is it bottom-up and upper left is start.
+7.  biBitCount defines the number of bits-per-pixel
+8.  There could be several reasons you would get NULL, including the file that you are opening doesn't exist, or it is open in a mode that doesn't allow other accesses, file exists but you don't have permissions, or perhaps you are accessing a file thats on a server and your server is down. 
+9.  The one tells you how many elements to read.  So the the second argument to freed() tells you the size of the element to be read, and the third argument tells you how many of those elementes to read. 
+10. Padding would equal 3. 
+11. The fseek() function sets the file position of the stream to the given offset so can jump over any padding and get to the . 
+12. SEEK_CUR is a macro that consists of an integer constant (which is currently 1) which used in the fseek function, specifies that the offset provided is relative to the current file position.
